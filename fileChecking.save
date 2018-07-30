@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ -d /home/saikat/basic_folders_for_learning_languages/learning_bashScripting/myfolder ]	then
+		echo "the folder does not exist"
+else
+		echo "the folder exists"
+fi

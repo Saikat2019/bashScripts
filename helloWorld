@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#this script prints hello world to the terminal
+echo "hello world"
+echo "learning bash scripting"
