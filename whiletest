@@ -1,0 +1,92 @@
+#!/bin/bash
+
+#!/bin/bash
+
+cd /etc
+
+
+		##################################################################
+		##								##
+		##    SAIKAT MONDAL IS OWNER OF THIS BASH SCRIPT		##
+		##		COPYWRITE GOES TO SAIKAT MONDAL			##
+		## 	COMMERCIAL USE IS STRICTLY PROHIBITED			##
+		##		FACEBOOK PROFILE LINK - 			##
+		##    https://www.facebook.com/profile.php?id=100011440244328	##
+		## 		GITHUB PROFILE LINK -				##
+		##		https://github.com/Saikat2019			##
+		##								##
+		##################################################################
+
+echo '
+		##################################################################
+		##								##
+		##    SAIKAT MONDAL IS OWNER OF THIS BASH SCRIPT		##
+		##		COPYWRITE GOES TO SAIKAT MONDAL			##
+		## 	COMMERCIAL USE IS STRICTLY PROHIBITED			##
+		##		FACEBOOK PROFILE LINK - 			##
+		##    https://www.facebook.com/profile.php?id=100011440244328	##
+		## 		GITHUB PROFILE LINK -				##
+		##		https://github.com/Saikat2019			##
+		##								##
+		##################################################################
+
+'
+echo 'proceed only if you are sure what you are doing or someone you know has suggested'
+echo 'press CTRL C if you want to exit within 8 second, else wait for 8 second.....XD...'
+
+second=1
+echo ''
+echo -n '       .................lol.....       '
+
+while [ $second -le 9 ]
+do
+	echo -n $second '   WAIT...'
+	sleep 1
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	second=$(($second+1))
+done
+
+while [ $second -le 15 ]
+do
+	echo -n $second '   WAIT...'
+	sleep 1
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	second=$(($second+1))
+done
+
+echo 'process continued ...'
+
+
+var=1
+
+while [ $var -le 10 ]
+do
+	echo $var
+	var=$(($var+1))
+	echo -n "blahh"; 
+	echo -e "\b \b"
+	sleep $var
+done

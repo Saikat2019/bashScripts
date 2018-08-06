@@ -1,0 +1,21 @@
+#!/bin/bash
+
+version=$(lsb_release -a)
+echo $version
+myVer='16.04'
+
+for ver in $version
+do
+echo $ver
+if [ $ver = '14.04' ]
+then
+	echo 'it is 14.04'
+	break
+fi
+if [ $ver = '16.04' ]
+then
+        echo 'it is 16.04'
+        break
+fi
+
+done

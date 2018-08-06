@@ -1,0 +1,195 @@
+#!/bin/bash
+
+cd /etc
+
+
+		##################################################################
+		##								##
+		##    SAIKAT MONDAL IS OWNER OF THIS BASH SCRIPT		##
+		##		COPYWRITE GOES TO SAIKAT MONDAL			##
+		## 	COMMERCIAL USE IS STRICTLY PROHIBITED			##
+		##		FACEBOOK PROFILE LINK - 			##
+		##    https://www.facebook.com/profile.php?id=100011440244328	##
+		## 		GITHUB PROFILE LINK -				##
+		##		https://github.com/Saikat2019			##
+		##								##
+		##################################################################
+
+echo '
+		##################################################################
+		##								##
+		##    SAIKAT MONDAL IS OWNER OF THIS BASH SCRIPT		##
+		##		COPYWRITE GOES TO SAIKAT MONDAL			##
+		##  HE IS A SECOND YEAR UG STUDENT OF IIT KHARAGPUR IN THE DEPT ##
+		##	OF METALLURGICAL AND MATERIALS ENGINEERING		##
+		## 	COMMERCIAL USE IS STRICTLY PROHIBITED			##
+		##		FACEBOOK PROFILE LINK - 			##
+		##    https://www.facebook.com/profile.php?id=100011440244328	##
+		## 		GITHUB PROFILE LINK -				##
+		##		https://github.com/Saikat2019			##
+		##								##
+		##################################################################
+
+'
+echo 'proceed only if you are sure what you are doing or someone you know has suggested'
+echo 'press CTRL C if you want to exit within 20 second,else wait for 20 second .....XD...'
+
+second=1
+echo ''
+echo '       ...DONT WASTE TIME READ MY INTRO'
+echo -n '..............lol.....       '
+
+while [ $second -le 9 ]
+do
+	echo -n $second '   WAIT...'
+	sleep 1
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	second=$(($second+1))
+done
+
+while [ $second -le 15 ]
+do
+	echo -n $second '   WAIT...'
+	sleep 1
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	echo -n -e "\b \b"
+	second=$(($second+1))
+done
+
+echo 'process continued ...'
+
+## Test if the local host is Arch-based##
+if [ -d /etc/pacman.d ]
+then
+	##run the Arch version of update command##
+	sudo pacman -syu
+fi
+
+##Test if the local host is Debian based
+
+if [-d /etc/apt ]
+	##run the debian based##
+	sudo apt-get update && sudo apt-get upgrade
+fi
+
+##Remove any previous installations of x264</h3>##
+sudo apt-get remove x264 libx264-dev
+ 
+##We will Install dependencies now##
+ 
+sudo apt-get install build-essential checkinstall cmake pkg-config yasm
+sudo apt-get install git gfortran
+sudo apt-get install libjpeg8-dev libjasper-dev libpng12-dev
+
+MyVersion=$(lsb_release -a)
+
+for word in $MyVersion
+do
+	if [ $word = '14.04' ]
+	then
+		## If you are using Ubuntu 14.04##
+		sudo apt-get install libtiff4-dev
+	fi
+	
+	if [ $word = '16.04' ]
+	then
+		## If you are using Ubuntu 16.04##
+  		sudo apt-get install libtiff5-dev
+	fi
+done 
+ 
+sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev
+sudo apt-get install libxine2-dev libv4l-dev
+sudo apt-get install libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev
+sudo apt-get install qt5-default libgtk2.0-dev libtbb-dev
+sudo apt-get install libatlas-base-dev
+sudo apt-get install libfaac-dev libmp3lame-dev libtheora-dev
+sudo apt-get install libvorbis-dev libxvidcore-dev
+sudo apt-get install libopencore-amrnb-dev libopencore-amrwb-dev
+sudo apt-get install x264 v4l-utils
+
+## Optional dependencies ##
+echo 'now we will download some optional dependencies , if you want to download enter 1 else enter 0'
+echo 'if you are not sure then enter 0'
+read input
+echo "you have entered $input "
+while true
+do
+	if [ $input = '1' ];then
+		echo 'you have choose to proceed'
+		sudo apt-get install libprotobuf-dev protobuf-compiler
+		sudo apt-get install libgoogle-glog-dev libgflags-dev
+		sudo apt-get install libgphoto2-dev libeigen3-dev libhdf5-dev doxygen
+		break
+	elif [ $input = '0' ];then
+		echo 'you want to exit'
+		break
+	else
+		echo 'please enter either 0 or 1'
+		read input
+		continue
+	fi
+done
+
+##checking if git is installed or not
+if ! [ -x "$(command -v git)" ]; then
+	##if git is not installed then install it ##
+	echo 'git is not installed in your machine'
+	echo 'installing git'
+	sudo apt-get install git
+fi
+
+git clone https://github.com/opencv/opencv.git
+git clone https://github.com/opencv/opencv_contrib.git
+
+cd opencv
+mkdir Saikat_Build
+cd Saikat_build
+
+## running CMAKE ##
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+      -D CMAKE_INSTALL_PREFIX=/usr/local \
+      -D INSTALL_C_EXAMPLES=ON \
+      -D INSTALL_PYTHON_EXAMPLES=ON \
+      -D WITH_TBB=ON \
+      -D WITH_V4L=ON \
+      -D WITH_QT=ON \
+      -D WITH_OPENGL=ON \
+      -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
+      -D BUILD_EXAMPLES=ON ..
+
+## find out number of CPU cores in your machine ##
+nproc
+## substitute 4 by output of nproc##
+make -j4
+sudo make install
+sudo sh -c 'echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf'
+sudo ldconfig
+
+echo ' now OpenCV CPP is installed in your local'
+echo ''
+echo ' now this script is being **DELETED** so that no one can use it for commercial purpose'
+
+rm ./installOpenCV_SaikatBash

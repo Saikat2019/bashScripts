@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "what is your favorite ninja?"
+
+echo "1 - saikat."
+echo "2 - mondal."
+echo "3 - kartick."
+
+read turtle;
+
+case $turtle in
+	1) echo "saikat is cool.";;
+	2) echo "mondal is cooler.";;
+	3) echo "kartick is coolest./";;
+esac

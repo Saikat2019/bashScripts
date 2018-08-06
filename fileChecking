@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#the -f stands for a file 
+
+##to check for a folder replace the -f with -d
+
+if [ -f /home/saikat/basic_folders_for_learning_languages/learning_bashScripting/myfile ]
+	then
+		echo "the file exist"
+else
+		echo "the file does not exists"
+fi

@@ -1,0 +1,11 @@
+total 32
+-rwxrwxr-x 1 saikat saikat 251 Jul 29 00:36 fileChecking
+-rwxrwxr-x 1 saikat saikat 173 Jul 29 00:20 fileChecking.save
+-rw-rw-r-- 1 saikat saikat   0 Jul 29 00:50 files.txt
+-rwxrwxr-x 1 saikat saikat 111 Jul 28 22:52 helloWorld
+-rwxrwxr-x 1 saikat saikat 118 Jul 28 23:59 ifStatement
+-rw-rw-r-- 1 saikat saikat   0 Jul 29 00:37 myfile
+-rwxrwxr-x 1 saikat saikat  29 Jul 28 22:56 tryWithoutChmod
+-rwxrwxr-x 1 saikat saikat 298 Jul 29 00:45 updateScript
+-rwxrwxr-x 1 saikat saikat  37 Jul 28 23:04 variables
+-rwxrwxr-x 1 saikat saikat  33 Jul 28 23:08 watchDisk

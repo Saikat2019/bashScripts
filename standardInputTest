@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "please input your name : "
+read name
+echo "welcome $name"
+echo "enter 1 if yes or 0 if no : "
+read input
+echo "you have entered $input "
+while true
+do
+	if [ $input = '1' ];then
+		echo 'you have choose to proceed'
+		break
+	elif [ $input = '0' ];then
+		echo 'you want to exit'
+		break
+	else
+		echo 'please enter either 0 or 1'
+		read input
+		continue
+	fi
+done

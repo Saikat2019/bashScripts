@@ -1,0 +1,2 @@
+ls: cannot open directory '/root': Permission denied
+ls: cannot access 'OpenCV': No such file or directory
