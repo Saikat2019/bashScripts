@@ -3,7 +3,6 @@
 echo "please input your name : "
 read name
 echo "welcome $name"
-<<<<<<< HEAD
 echo "enter 1 if yes or 0 if no : "
 read input
 echo "you have entered $input "
@@ -21,5 +20,3 @@ do
 		continue
 	fi
 done
-=======
->>>>>>> cf88286958b4dad0cc616f21ff9daed168175933
