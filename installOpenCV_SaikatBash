@@ -90,6 +90,7 @@ fi
 ##Test if the local host is Debian based
 
 if [-d /etc/apt ]
+then
 	##run the debian based##
 	sudo apt-get update && sudo apt-get upgrade
 fi
